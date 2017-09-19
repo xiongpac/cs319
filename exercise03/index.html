@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <script>
+                function addNumbers() {
+                    var x; 
+                    var y;
+                    var answer;
+                    
+                    x = 13;
+                    alert(x);
+                    y = 7;
+                    alert(y);
+                    
+                    answer = x + y;
+                    alert(answer);
+                    
+                    document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + answer + "!";
+                }
+            function SubNumbers() {
+                    var x; 
+                    var y;
+                    var answer;
+                    
+                    x = 14;
+                    alert(x);
+                    y = 6;
+                    alert(y);
+                    
+                    answer = x - y;
+                    alert(answer);
+                    
+                    document.getElementById("equation").innerHTML = x + " subtract " + y + " equals " + answer + "!";
+                }
+            function MultNumbers() {
+                    var x; 
+                    var y;
+                    var answer;
+                    
+                    x = 10;
+                    alert(x);
+                    y = 5;
+                    alert(y);
+                    
+                    answer = x * y;
+                    alert(answer);
+                    
+                    document.getElementById("equation").innerHTML = x + " multiply " + y + " equals " + answer + "!";
+                }
+            function DivNumbers() {
+                    var x; 
+                    var y;
+                    var answer;
+                    
+                    x = 14;
+                    alert(x);
+                    y = 7;
+                    alert(y);
+                    
+                    answer = x / y;
+                    alert(answer);
+                    
+                    document.getElementById("equation").innerHTML = x + " divide " + y + " equals " + answer + "!";
+                }
+        </script>
+        <p id="equation"></p>
+        <form name="calculator" action="#" method="get">
+            <p><input type="button" id="add" name="add" value="Add" onclick="addNumbers();">
+            <input type="button" id="subtract" name="subtract" value="Subtract" onclick="SubNumbers();">
+            <input type="button" id="multiply" name="multiply" value="Multiply" onclick="MultNumbers();">
+            <input type="button" id="divide" name="divide" value="Divide" onclick="DivNumbers();"></p>
+        </form>
+    </body>
+</html>
