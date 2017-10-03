@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function stories() {
+                var name = document.story.names.value;
+                names = parseFloat(names);
+                var number = document.story.number.value;
+                number = parseInt(number);
+                
+                name = name.trim();
+                number = number.trim();
+
+                if (name == "") {
+                    alert("Please enter your name.")
+                    document.stories.names.focus();
+                        return false;
+                } else if (number == "") {
+                    return false;
+                } else if (color == ""){
+                    return false;
+                } else if (animal == "") {
+                    return false;
+                } else {
+                    return true;
+                }
+                
+                story = "Hello my name is" + name + "!"
+            }            
+        </script>
+        <form name="story" id="story" action="website on yoda" method="get" onsbumit="return stories();">
+            <p>Name:<input type="text" name="names" id="names"></p>
+            <p> Number:<input type="text" name="number" id="number"></p>
+            <p>Color:<br>
+                <input type="radio" name="color" value="black">Black<br>
+                <input type="radio" name="color" value="brown">Brown<br>
+                <input type="radio" name="color" value="orange">Orange<br>
+            </p>
+            <p>Animal(s):<br>
+            <select name="animal">
+                <option value="kangaroo">Kangaroo</option>
+                <option value="turkey">Turkey</option>
+                <option value="elephant">Elephant</option>
+            </select> 
+            <p><input type="submit" name="tellStory" id="tellStory" value="Tell Story!" onclick="stories();"></p>
+            <p><input type="text" id="story" readonly></p>
+        </form>
+        <hr>
+        <p id="words"></p>
+    </body>
+</html>
