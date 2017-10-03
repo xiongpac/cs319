@@ -11,6 +11,10 @@
                 names = parseFloat(names);
                 var number = document.story.number.value;
                 number = parseInt(number);
+                var color = document.story.color.value;
+                var animal = document.story.animal.value;
+                
+                document.getElementById("words").innerHTML= "Hello, my name is " + name + " I have " + " " + number + " " +  color + " " + animal + "!";
             }            
         </script>
         <form name="story" id="story" action="#" method="get">

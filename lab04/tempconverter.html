@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Temperature</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function convert() {
+                var ftoc;
+                    ftoc = parseFloat(document.converter.ftoc.value);
+                
+                var ctof;
+                    ctof = (2 * 3.14 * ftoc);
+                
+                document.converter.ctof.value = ctof;
+            }
+        </script>
+        <form name="converter" id="converter" action="#" method="get">
+        <h1>Temperature Converter</h1>
+        <p>Temperature in Fahrenheit:<br>
+        <input type="number" name="fahrenheit" id="fahrenheit" ></p>
+        <p><input type="button" name="ftoc" id="ftoc" value="F to C" onclick=" ();"></p>
+        <p><input type="button" name="ctof" id="ctof" value="C to F" onclick=" ();"></p>
+        <p>Temperature in Celsius:<br>
+        <input type="number" name="celsius" id="celsius"></p>
+        </form>
+    </body>
+</html>

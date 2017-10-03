@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cleanup</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function check() {
+                //var animal = document.form.input.value = " ";
+                var first = 
+                    document.name.first.value;
+                    first = first.trim();
+                    first = first.toUpperCase();
+                var midinitial = 
+                    document.name.midinitial.value;
+                    midinitial = midinitial.trim();
+                    midinitial = midinitial.toUpperCase();
+                var last = 
+                    document.name.last.value;
+                    last = last.trim();
+                    last = last.toUpperCase();
+                
+                document.name.fullname.value = first + " " + midinitial + " " + last;
+            }
+        </script>
+        <form name="name" id="name" action="#" method="get">
+        <h1>Name Cleanup</h1>
+        <p>First Name: <br>
+            <input type="text" name="first" id="first"></p>
+         <p>Middle Initial:<br>
+             <input type="text" name="midinitial" id="midinitial"></p>
+         <p>Last Name:<br>
+             <input type="text" name="last" id="last"></p>
+        <p><input type="button" id="cleanup" name="cleanup" value="Cleanup Name" onclick="check();"></p>
+            <p>Full Name:<br>
+            <input type="text" name="fullname" id="fullname" readonly>
+            </p>
+        </form>
+    </body>
+</html>
