@@ -7,17 +7,18 @@
     <body>
         <script>
             function valid() {
-                var color = document.getElementById(color);
+                var quiz = document.getElementById(color);
                 
-                if (isNaN(color.value) == false) {
+                if (isNaN(quiz.value) == false) {
                     alert("Please enter a valid color!");
                     color.focus();
                     return false;
                 }
             }
         </script>
-        <form name="quiz" id="quiz" action="#" method="get"></form>
-        <p>What is your favorite color? <input type="text" name="color" id="color"></p>
-        <p><input type="submit" value="Submit" class="submit" onsubmit="valid();"></p>
+        <form name="quiz" id="quiz" action="#" method="get">
+            <p>What is your favorite color? <input type="text" name="color" id="color"></p>
+            <p><input type="submit" value="Submit" class="submit" onsubmit="valid();"></p>
+        </form>
     </body>
 </html> 

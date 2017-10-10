@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <title>Exercise 06</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function guess() {
+                var numguess;
+                var guessed;
+                
+                numguess = document.getElementById("numb").value;
+                guessed = 6;
+                
+                if (numguess.value == " ") {
+                    alert("Please put in a value.");
+                    number.focus();
+                    return false;}
+                else if (isNaN(numguess.value) == true) {
+                    alert("Invalid input. Please put in a number.");
+                    number.select();
+                    return false;}
+                else if (numguess.value < 1 || numguess.value > 10) {
+                    alert(" Invalid number. ");
+                    number.select();
+                    return false;}
+                else if (numguess.value > guessed) {
+                    alert(" Guess a lower number.");
+                    number.select();
+                    return false;}
+                else if (numguess.value < guessed) {
+                    alert(" Guess a higher number.");
+                    number.select();
+                    return false;}
+                else if (numguess.value == guessed) {
+                    alert("Correct!");
+                    return true;}
+            }
+        </script>
+        <form name="game" id="game" action="#" method="get" onsubmit="return guess();" >
+            <h3>Guess the number I'm thinking of? </h3>
+            <p>Out of a scale of 0-10.</p> 
+            <p><input type="number" name="numb" id="numb"></p>
+            <p><input type="submit" value="Submit" class="submit"></p>
+        </form>
+    </body>
+    
+</html>
