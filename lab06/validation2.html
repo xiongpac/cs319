@@ -8,10 +8,14 @@
                 var fname;
                 var lname;
                 var add;
+                var agge;
                 
                 fname = document.getElementById("firstname").value;
                 lname = document.getElementById("lastname").value;
                 add = document.getElementById("email").value;
+                agge = document.getElementById("age").value;
+                
+                eamil = email.trim();
                 
                 if (fname == "") {
                     alert("Please fill in your first name.");
@@ -22,9 +26,25 @@
                 } else if (add == "") {
                     alert("Please fill in your email address.")
                     return false;
+                } else if (email.value.indexof ("@") <= 0){
+                    alert ("Your email is not valid.");
+                    email.select();
+                    return false;
+                } else if (agge == "") {
+                    alert("Please fill in your age.");
+                    agge.focus();
+                    return false;
+                } else if (agge == "isNaN") {
+                    alert(Please enter a numer in the age.
+                    agge.focus();
+                    return false;
+                } else if (agge =< "18") {
+                    alert("Must be over 18.")
+                    agge.focus();
+                    return false;
                 } else {
                     return true;
-                }
+                } 
             }
         </script>
     </head>
@@ -33,6 +53,7 @@
             <p>First Name:<input type="text" name="firstname" id="firstname"></p>
             <p>Last Name:<input type="text" name="lastname" id="lastname"></p>
             <p>Email Address:<input type="text" name="email" id="email"></p>
+            <p>Age:<input type="text" name="age" id="age"></p>
             <p><input type="submit" id="go" name="go" value="GO"></p>
  		</form>
  	</body>
