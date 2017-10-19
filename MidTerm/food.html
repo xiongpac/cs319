@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 1</title>
+        <meta charaset="utf-8">
+    </head>
+    <body>
+        <script>
+            function displayFood() {
+                var fFood;
+                var sFood;
+                
+                var fFood =  document.getElementById("onef").value;
+                var sFood=  document.getElementById("ones").value;
+                
+                alert("Your favorite foods are:" + "" + "fFood" + "" + "sFood" + ".");
+            }
+        </script>
+         <form name="food" id="food" action="#" method="get" onsubmit="return Validate();">
+             <h1>What are your two favorite foods?</h1>
+             <p>First Favorite: <input type="onef" name="onef" id="onef"></p>
+             <p>Second Favorite: <input input type="ones" name="ones" id="ones"></p>
+             <p> <input type="submit" value="Submit" class="submit" onsubmit="return displayFood()"> </p>
+        </form>
+    </body>
+</html>
